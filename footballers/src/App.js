@@ -1,10 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from "react";
+import "./App.css";
+import Appbarlogin from "./components/AppbarLogin/Appbarlogin";
+import Layout from "./components/layout/Layout";
+import Appbar from "./components/Appbar.js/Appbar";
+import Test from "./components/Test";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello from Apps</h1>
+    <div>
+      <Layout>
+        <Appbarlogin />
+        <Test />
+      </Layout>
     </div>
   );
 }
