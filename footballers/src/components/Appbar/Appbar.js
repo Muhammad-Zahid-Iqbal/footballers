@@ -57,7 +57,7 @@ const Appbar = (props) => {
   const container =
     window !== undefined ? () => window().document.body : undefined;
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", height:"70px" }}>
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>

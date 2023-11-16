@@ -1,19 +1,19 @@
 // App.js
 import React from "react";
-import "./App.css";
-import Appbarlogin from "./components/AppbarLogin/Appbarlogin";
 import Layout from "./components/layout/Layout";
-import Appbar from "./components/Appbar.js/Appbar";
-import Test from "./components/Test";
+import Appbarlogin from "./components/AppbarLogin/Appbarlogin";
+import FindClass from "./components/find-class";
+import Locationtext from "./components/white-area/Locationtext";
+import Footer from "./components/footer-area/Footer";
 
 function App() {
   return (
-    <div>
-      <Layout>
-        <Appbarlogin />
-        <Test />
-      </Layout>
-    </div>
+    <Layout>
+      <Appbarlogin />
+      <FindClass/>
+      <Locationtext/>
+      <Footer />
+    </Layout>
   );
 }
 
