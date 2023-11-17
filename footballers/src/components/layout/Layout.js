@@ -11,14 +11,6 @@ const Layout = ({ children }) => {
         {children}
       </Box>
     </Box>
-    // <Grid container direction="column">
-    //   <Grid item>
-    //     <Appbar />
-    //   </Grid>
-    //   <Grid item>
-    //     {children}
-    //   </Grid>
-    // </Grid>
   );
 };
 

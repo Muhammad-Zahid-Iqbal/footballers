@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
 import Div from '../../shared/Div/Div';
-import logowhite from '../../images/logo-white.webp';
+import demofooter from '../../images/demofooter.png';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import DateRangeIcon from '@mui/icons-material/DateRange';
@@ -30,7 +30,7 @@ const Footer = () => {
         fontSize: "18px",
         fontFamily: "Red Hat Text,Arial,Helvetica,sans-serif",
         color: "#fff",
-        overflowX:"hidden"
+        overflowX: "hidden"
     }
     return (
         <>
@@ -38,10 +38,10 @@ const Footer = () => {
                 <Grid container spacing={2}>
                     <Grid item sm={4} xs={12} sx={{ display: "flex", justifyContent: "center" }}>
                         <Div>
-                            <img style={{ paddingLeft: "25px" }} src={logowhite} alt='footer image' />
+                            <img style={{ paddingLeft: "25px" }} src={demofooter} alt='footer image' />
                             <Div sx={{ display: "flex", mt: 5, pl: 2.9 }}>
-                                <EmailIcon style={{ color:'#ff7531' }}/>
-                                <p style={{ paddingLeft: 10, color:'#ff7531' }}>Make an enquiry</p>
+                                <EmailIcon style={{ color: '#ff7531' }} />
+                                <p style={{ paddingLeft: 10, color: '#ff7531' }}>Make an enquiry</p>
                             </Div>
                             <Div sx={{ display: "flex", mt: 5, pl: 2.9 }}>
                                 <PhoneIcon />
@@ -94,7 +94,7 @@ const Footer = () => {
                                 <p>1-on-1 Training</p>
                             </Div>
                             <Div sx={{ color: "white", mt: 5 }}>
-                                <Select
+                                {/* <Select
                                     sx={{ width: "100%", color: "white", border: "1px solid #fff" }}
                                     value={selectedLocation}
                                     onChange={handleChange}
@@ -109,36 +109,42 @@ const Footer = () => {
                                     <MenuItem value="location1">Location 1</MenuItem>
                                     <MenuItem value="location2">Location 2</MenuItem>
                                     <MenuItem value="location3">Location 3</MenuItem>
-                                </Select>
+                                </Select> */}
+                                <select id="cars" name="cars" value={selectedLocation} onChange={handleChange} style={{ color: "#fff", fontSize: "18px", outline: "none", border: "1px solid lightgray", borderColor: "none", background: "transparent", width: '100%', minWidth: '202px', height: '56px' }}>
+                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925", }} value="volvo">Counsellors</option>
+                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925" }} value="saab">Online Therapy</option>
+                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925" }} value="mercedes">Support Groups</option>
+                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925" }} value="audi">Class D</option>
+                                </select>
                             </Div>
                         </Div>
 
                     </Grid>
                 </Grid>
                 <hr style={{ width: "80%", margin: "auto", marginTop: "10%", height: "0.2px", }} />
-                <Grid container spacing={2} sx={{ paddingTop: "25px",  }}>
+                <Grid container spacing={2} sx={{ paddingTop: "25px", }}>
                     <Grid item sm={6} xs={12}>
                         <Box sx={{ paddingLeft: "20%", display: "flex" }}>
                             <Div sx={{ pr: 10 }}>
-                                <FacebookIcon style={{  color:'#ff7531' }}/>
+                                <FacebookIcon style={{ color: '#ff7531' }} />
                             </Div>
                             <Div sx={{ pr: 10 }}>
-                                <InstagramIcon style={{ color:'#ff7531' }}/>
+                                <InstagramIcon style={{ color: '#ff7531' }} />
                             </Div>
                             <Div>
-                                <TwitterIcon style={{  color:'#ff7531' }}/>
+                                <TwitterIcon style={{ color: '#ff7531' }} />
                             </Div>
                         </Box>
                     </Grid>
-                        <Grid item  sm={6} xs={12} sx={{display:"flex", textAlign:"center",gap:4,flexDirection: { xs: 'column', sm: 'row' },}}>
-                                <Typography>Privacy Policy</Typography>
-                                <Typography>|</Typography>
-                                <Typography>FAQ</Typography>
-                                <Typography>|</Typography>
-                                <Typography>Terms & Conditions</Typography>
-                                <Typography>|</Typography>
-                                <Typography>Sitemap</Typography>
-                        </Grid>
+                    <Grid item sm={6} xs={12} sx={{ display: "flex", textAlign: "center", gap: 4, flexDirection: { xs: 'column', sm: 'row' }, }}>
+                        <Typography>Privacy Policy</Typography>
+                        <Typography>|</Typography>
+                        <Typography>FAQ</Typography>
+                        <Typography>|</Typography>
+                        <Typography>Terms & Conditions</Typography>
+                        <Typography>|</Typography>
+                        <Typography>Sitemap</Typography>
+                    </Grid>
                 </Grid>
             </Box>
         </>

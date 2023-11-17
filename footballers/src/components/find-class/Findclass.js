@@ -8,12 +8,14 @@ import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 
 const Findclass = () => {
-  const [findClass, setFindClass] = React.useState("");
+  const [findClass, setFindClass] = React.useState("Class A");
 
   const handleChange = (event) => {
+    console.log("Selected value:", event.target.value);
     setFindClass(event.target.value);
   };
-  
+
+
   return (
     <>
       <Box sx={{ background: "#f2f2f2" }}>
@@ -57,11 +59,11 @@ const Findclass = () => {
                   <MenuItem value={30}>Class C</MenuItem>
                 </Select>
               </FormControl> */}
-              <select id="cars" name="cars" style={{ width: '100%',minWidth: '202px', height: '30px', padding: '27px'}}>
-                <option style={{fontSize:"20px"}} value="volvo">Class A</option>
-                <option style={{fontSize:"20px"}} value="saab">Class B</option>
-                <option style={{fontSize:"20px"}} value="mercedes">Class C</option>
-                <option style={{fontSize:"20px"}} value="audi">Class D</option>
+              <select id="cars" name="cars" value={findClass} onChange={handleChange} style={{color:"gray", fontSize: "18px", outline: "none", border: "1px solid lightgray", borderColor: "none", background: "transparent", width: '100%', minWidth: '202px', height: '58px' }}>
+                <option style={{ fontSize: "18px", background: "#f2f2f2" }} value="volvo">Counsellors</option>
+                <option style={{ fontSize: "18px", background: "#f2f2f2" }} value="saab">Online Therapy</option>
+                <option style={{ fontSize: "18px", background: "#f2f2f2" }} value="mercedes">Support Groups</option>
+                <option style={{ fontSize: "18px", background: "#f2f2f2" }} value="audi">Class D</option>
               </select>
             </Grid>
             <Grid item sm={5} xs={12}>
@@ -78,7 +80,21 @@ const Findclass = () => {
                     </>
                   ),
                 }}
-                // sx={{ border: "1px solid #ff7002", borderRadius:"10px"}}
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    border: "none",
+                  },
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    border: "none",
+                  },
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    border: "none",
+                  },
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    border: "none",
+                  },
+                  border: "1px solid lightgray"
+                }}
               />
             </Grid>
             <Grid item sm={1} xs={12}>
