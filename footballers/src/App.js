@@ -11,8 +11,8 @@ function App() {
   return (
     <Layout>
       <Appbarlogin />
-      {/* <FindClass/> */}
-      <Counselling/>
+      <FindClass/>
+      {/* <Counselling/> */}
       <Locationtext/>
       <Footer />
     </Layout>
