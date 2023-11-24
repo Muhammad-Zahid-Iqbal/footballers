@@ -67,10 +67,15 @@ const Findclass = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 marginTop: "2%",
-                width: "100%",
+                width: "90%",
                 marginTop: "10%",
+                // border:"1px solid red",
+                marginLeft: "10%",
+                borderRadius: "30px"
               }}
             >
+              {/* <div style={{border:"1px solid red", display:"flex", width:"100%", justifyContent: "center",
+                alignItems: "center",}}> */}
               <select
                 id="cars"
                 name="cars"
@@ -85,14 +90,15 @@ const Findclass = () => {
                   width: "100%",
                   maxWidth: "30%",
                   height: "78px",
-                  marginLeft: "10%",
+
                   background: "#fff",
-                  borderRadius: "20px", // Border radius
                   padding: "10px", // Padding
                   backgroundImage: `url('https://c.superprof.com/style/images/home/v4/book-new-off.svg')`, // Replace with your image URL
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "10px center", // Adjust the position as needed
                   paddingLeft: "40px",
+                  appearance: "none",
+                  position: "relative",
                 }}
               >
                 <option
@@ -120,6 +126,13 @@ const Findclass = () => {
                   Class D
                 </option>
               </select>
+              <div
+                style={{
+                  borderLeft: "1px solid gray",
+                  height: "40px",
+                  background: "#fff"
+                }}
+              ></div>
 
               <TextField
                 fullWidth
@@ -133,7 +146,7 @@ const Findclass = () => {
                         alt="Search Icon"
                         style={{
                           height: "34px",
-                          width:"50px",
+                          width: "50px",
                           marginRight: "5px",
                           filter: "grayscale(100%)",
                         }}
@@ -144,7 +157,7 @@ const Findclass = () => {
                     <Button
                       sx={{
                         minWidth: "8%",
-                        height: "56px",
+                        height: "50px",
                         background: "#ff7002",
                         color: "#fff",
                         borderRadius: "10px", // Border radius
@@ -158,10 +171,10 @@ const Findclass = () => {
                 }}
                 sx={{
                   "& .MuiOutlinedInput-root": {
-                    borderRadius: "20px", // Border radius
                     padding: "10px", // Padding
                     background: "#fff", // Background color
                     position: "relative",
+                    width: "100%"
                   },
                   "& .MuiOutlinedInput-notchedOutline": {
                     border: "none",
@@ -174,6 +187,7 @@ const Findclass = () => {
                   },
                 }}
               />
+              {/* </div> */}
             </Box>
           </Grid>
 
