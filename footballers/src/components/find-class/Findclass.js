@@ -57,7 +57,7 @@ const Findclass = () => {
                 }}
               >
                 ✅ Check reviews, chat with our tutors, and book lessons all in
-                one place 🎉 Pay as you go and 1st lesson is free!
+                one place 🎉 
               </Typography>
             </Grid>
 

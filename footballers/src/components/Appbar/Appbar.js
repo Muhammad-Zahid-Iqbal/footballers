@@ -77,7 +77,7 @@ const Appbar = (props) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <img src={gitlab} alt="logo" style={{width:"40%", height:"70px"}}/>
+            <img src={gitlab} alt="logo" style={{width:"20%", height:"70px"}}/>
           </Typography>
           <Box
             sx={{
@@ -87,9 +87,7 @@ const Appbar = (props) => {
               textAlign: "center",
             }}
           >
-            <Button sx={{ color: "#fff", m: 1 }}>Holiday Camps</Button>
-            <Button sx={{ color: "#fff", m: 1 }}>Weekly Training</Button>
-            <Button sx={{ color: "#fff", m: 1 }}>Birthday Parties</Button>
+            
             <Button variant="contained" sx={{
     m: 1,
     backgroundColor: "#ee7925",
