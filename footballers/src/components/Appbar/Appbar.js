@@ -87,8 +87,8 @@ const Appbar = (props) => {
               textAlign: "center",
             }}
           >
-            <Button sx={{ color: "#fff", m: 1 }}>Weekly Training</Button>
             <Button sx={{ color: "#fff", m: 1 }}>Holiday Camps</Button>
+            <Button sx={{ color: "#fff", m: 1 }}>Weekly Training</Button>
             <Button sx={{ color: "#fff", m: 1 }}>Birthday Parties</Button>
             <Button variant="contained" sx={{
     m: 1,
@@ -99,7 +99,7 @@ const Appbar = (props) => {
         color: "#ee7925",
       },
   }}>
-              Book a free session
+              Book a session
             </Button>
           </Box>
         </Toolbar>

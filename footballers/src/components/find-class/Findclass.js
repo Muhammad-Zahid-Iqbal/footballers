@@ -2,12 +2,14 @@ import React from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
-import Toppng from '../../images/top.png';
-import Bottompng from '../../images/bottom.png';
+import Toppng from "../../images/top.png";
+import Bottompng from "../../images/bottom.png";
+import { MenuItem } from "@mui/joy";
 
 const Findclass = () => {
   const [findClass, setFindClass] = React.useState("Class A");
-
+  const selectImage =
+    "https://c.superprof.com/style/images/home/v4/book-new-off.svg";
   const handleChange = (event) => {
     console.log("Selected value:", event.target.value);
     setFindClass(event.target.value);
@@ -66,8 +68,7 @@ const Findclass = () => {
                 alignItems: "center",
                 marginTop: "2%",
                 width: "100%",
-                marginTop: "10%"
-
+                marginTop: "10%",
               }}
             >
               <select
@@ -79,27 +80,43 @@ const Findclass = () => {
                   color: "gray",
                   fontSize: "18px",
                   outline: "none",
-                  border: "1px solid lightgray",
-                  borderColor: "none",
+                  border: "none",
                   background: "transparent",
                   width: "100%",
                   maxWidth: "30%",
-                  height: "58px",
+                  height: "78px",
                   marginLeft: "10%",
-                  background: "#fff"
-
+                  background: "#fff",
+                  borderRadius: "20px", // Border radius
+                  padding: "10px", // Padding
+                  backgroundImage: `url('https://c.superprof.com/style/images/home/v4/book-new-off.svg')`, // Replace with your image URL
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "10px center", // Adjust the position as needed
+                  paddingLeft: "40px",
                 }}
               >
-                <option style={{ fontSize: "18px", background: "#f2f2f2" }} value="volvo">
+                <option
+                  style={{ fontSize: "18px", background: "#f2f2f2" }}
+                  value="volvo"
+                >
                   Counsellors
                 </option>
-                <option style={{ fontSize: "18px", background: "#f2f2f2" }} value="saab">
+                <option
+                  style={{ fontSize: "18px", background: "#f2f2f2" }}
+                  value="saab"
+                >
                   Online Therapy
                 </option>
-                <option style={{ fontSize: "18px", background: "#f2f2f2" }} value="mercedes">
+                <option
+                  style={{ fontSize: "18px", background: "#f2f2f2" }}
+                  value="mercedes"
+                >
                   Support Groups
                 </option>
-                <option style={{ fontSize: "18px", background: "#f2f2f2" }} value="audi">
+                <option
+                  style={{ fontSize: "18px", background: "#f2f2f2" }}
+                  value="audi"
+                >
                   Class D
                 </option>
               </select>
@@ -111,13 +128,40 @@ const Findclass = () => {
                 InputProps={{
                   startAdornment: (
                     <>
-                      <SearchIcon color="action" />
+                      <img
+                        src="https://icones.pro/wp-content/uploads/2021/02/icone-de-localisation-grise.png"
+                        alt="Search Icon"
+                        style={{
+                          height: "34px",
+                          width:"50px",
+                          marginRight: "5px",
+                          filter: "grayscale(100%)",
+                        }}
+                      />
                     </>
+                  ),
+                  endAdornment: (
+                    <Button
+                      sx={{
+                        minWidth: "8%",
+                        height: "56px",
+                        background: "#ff7002",
+                        color: "#fff",
+                        borderRadius: "10px", // Border radius
+                        marginLeft: "10px", // Add some margin for spacing
+                      }}
+                      variant="contained"
+                    >
+                      Search
+                    </Button>
                   ),
                 }}
                 sx={{
                   "& .MuiOutlinedInput-root": {
-                    border: "none",
+                    borderRadius: "20px", // Border radius
+                    padding: "10px", // Padding
+                    background: "#fff", // Background color
+                    position: "relative",
                   },
                   "& .MuiOutlinedInput-notchedOutline": {
                     border: "none",
@@ -128,42 +172,70 @@ const Findclass = () => {
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     border: "none",
                   },
-                  border: "1px solid lightgray",
-                  background: "#fff"
                 }}
               />
-              <Button
-                sx={{
-                  minWidth: "15%",
-                  height: "56px",
-                  background: "#ff7002",
-                  color: "#fff",
-                }}
-                variant="contained"
-              >
-                Search
-              </Button>
             </Box>
           </Grid>
 
-          <Grid item sm={6} xs={12} sx={{ margin: "auto", display: "flex", textAlign: "center", alignContent: "center" }}>
-            <Box style={{ position: "relative", height: "95%", }}>
-              <div style={{ position: "absolute", top: 0, left: 0, height: "100%", width: "100%" }}>
+          <Grid
+            item
+            sm={6}
+            xs={12}
+            sx={{
+              margin: "auto",
+              display: "flex",
+              textAlign: "center",
+              alignContent: "center",
+            }}
+          >
+            <Box style={{ position: "relative", height: "95%" }}>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  height: "100%",
+                  width: "100%",
+                }}
+              >
                 <img
                   src={Toppng}
-                  style={{ position: "absolute", top: 0, left: 0, width: "25%", animation: "scaleAnimation 3s infinite alternate" }}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "25%",
+                    animation: "scaleAnimation 3s infinite alternate",
+                  }}
                   alt="Top Left Image"
                 />
               </div>
               <Box sx={{ marginTop: "10%" }}>
-                <img src="https://img.freepik.com/free-photo/young-mother-working-from-home-with-daughter_329181-18974.jpg?w=740&t=st=1700745258~exp=1700745858~hmac=ad7c615a1015baf811a6840a0c97377abd9bb6b4f24140f8f22caba8a31809fa" style={{ height: "80%", width: "80%" }} />
-
+                <img
+                  src="https://img.freepik.com/free-photo/young-mother-working-from-home-with-daughter_329181-18974.jpg?w=740&t=st=1700745258~exp=1700745858~hmac=ad7c615a1015baf811a6840a0c97377abd9bb6b4f24140f8f22caba8a31809fa"
+                  style={{ height: "80%", width: "80%" }}
+                />
               </Box>
 
-              <div style={{ position: "absolute", bottom: 0, right: 0, height: "100%", width: "100%" }}>
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  right: 0,
+                  height: "100%",
+                  width: "100%",
+                }}
+              >
                 <img
                   src={Bottompng}
-                  style={{ position: "absolute", bottom: 0, right: 0, height: "20%", width: "20%", animation: "scaleAnimation 3s infinite alternate" }}
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    right: 0,
+                    height: "20%",
+                    width: "20%",
+                    animation: "scaleAnimation 3s infinite alternate",
+                  }}
                   alt="Bottom Right Image"
                 />
               </div>
