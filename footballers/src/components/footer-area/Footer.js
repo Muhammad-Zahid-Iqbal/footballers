@@ -111,10 +111,8 @@ const Footer = () => {
                                     <MenuItem value="location3">Location 3</MenuItem>
                                 </Select> */}
                                 <select id="cars" name="cars" value={selectedLocation} onChange={handleChange} style={{ color: "#fff", fontSize: "18px", outline: "none", border: "1px solid lightgray", borderColor: "none", background: "transparent", width: '100%', minWidth: '202px', height: '56px' }}>
-                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925", }} value="volvo">Counsellors</option>
-                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925" }} value="saab">Online Therapy</option>
-                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925" }} value="mercedes">Support Groups</option>
-                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925" }} value="audi">Class D</option>
+                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925", }} value="tutors ">Tutors </option>
+                                    <option style={{ fontSize: "18px", background: "#f2f2f2", color: "#ee7925" }} value="assessors">Assessors</option>
                                 </select>
                             </Div>
                         </Div>

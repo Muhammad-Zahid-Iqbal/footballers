@@ -103,27 +103,15 @@ const Findclass = () => {
               >
                 <option
                   style={{ fontSize: "18px", background: "#f2f2f2" }}
-                  value="volvo"
+                  value="tutors "
                 >
-                  Counsellors
+                  Tutors 
                 </option>
                 <option
                   style={{ fontSize: "18px", background: "#f2f2f2" }}
-                  value="saab"
+                  value="assessors"
                 >
-                  Online Therapy
-                </option>
-                <option
-                  style={{ fontSize: "18px", background: "#f2f2f2" }}
-                  value="mercedes"
-                >
-                  Support Groups
-                </option>
-                <option
-                  style={{ fontSize: "18px", background: "#f2f2f2" }}
-                  value="audi"
-                >
-                  Class D
+                  Assessors
                 </option>
               </select>
               <div
@@ -153,21 +141,9 @@ const Findclass = () => {
                       />
                     </>
                   ),
-                  endAdornment: (
-                    <Button
-                      sx={{
-                        minWidth: "8%",
-                        height: "50px",
-                        background: "#ff7002",
-                        color: "#fff",
-                        borderRadius: "10px", // Border radius
-                        marginLeft: "10px", // Add some margin for spacing
-                      }}
-                      variant="contained"
-                    >
-                      Search
-                    </Button>
-                  ),
+                  // endAdornment: (
+                   
+                  // ),
                 }}
                 sx={{
                   "& .MuiOutlinedInput-root": {
@@ -187,7 +163,21 @@ const Findclass = () => {
                   },
                 }}
               />
+              
               {/* </div> */}
+              <Button
+                      sx={{
+                        minWidth: "18%",
+                        height: "75px",
+                        background: "#ff7002",
+                        color: "#fff",
+                        // borderRadius: "10px", // Border radius
+                        // marginLeft: "10px", // Add some margin for spacing
+                      }}
+                      variant="contained"
+                    >
+                      Search
+                    </Button>
             </Box>
           </Grid>
 
