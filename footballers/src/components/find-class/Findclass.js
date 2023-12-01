@@ -57,7 +57,7 @@ const Findclass = () => {
                 }}
               >
                 ✅ Check reviews, chat with our tutors, and book lessons all in
-                one place 🎉 
+                one place 🎉
               </Typography>
             </Grid>
 
@@ -105,7 +105,7 @@ const Findclass = () => {
                   style={{ fontSize: "18px", background: "#f2f2f2" }}
                   value="tutors "
                 >
-                  Tutors 
+                  Tutors
                 </option>
                 <option
                   style={{ fontSize: "18px", background: "#f2f2f2" }}
@@ -142,7 +142,7 @@ const Findclass = () => {
                     </>
                   ),
                   // endAdornment: (
-                   
+
                   // ),
                 }}
                 sx={{
@@ -163,21 +163,21 @@ const Findclass = () => {
                   },
                 }}
               />
-              
+
               {/* </div> */}
               <Button
-                      sx={{
-                        minWidth: "18%",
-                        height: "75px",
-                        background: "#ff7002",
-                        color: "#fff",
-                        // borderRadius: "10px", // Border radius
-                        // marginLeft: "10px", // Add some margin for spacing
-                      }}
-                      variant="contained"
-                    >
-                      Search
-                    </Button>
+                sx={{
+                  minWidth: "18%",
+                  height: "75px",
+                  background: "#ff7002",
+                  color: "#fff",
+                  // borderRadius: "10px", // Border radius
+                  // marginLeft: "10px", // Add some margin for spacing
+                }}
+                variant="contained"
+              >
+                Search
+              </Button>
             </Box>
           </Grid>
 
