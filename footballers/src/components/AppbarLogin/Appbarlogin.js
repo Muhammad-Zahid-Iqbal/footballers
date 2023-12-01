@@ -17,6 +17,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import header_trustpilot from '../../images/header_trustpilot.webp';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Link, useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -25,6 +26,7 @@ const Appbarlogin = (props) => {
   const isMobile = useMediaQuery('(max-width:600px)');
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -71,9 +73,9 @@ const Appbarlogin = (props) => {
             <img src={header_trustpilot} alt="logo" />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Button sx={{ color: "#fff", m: 2 }}>Find A Class</Button>
+            <Button sx={{ color: "#fff", m: 2 }} to='/find-class' component={Link}>Find A Class</Button>
             <Button sx={{ color: "#fff", m: 2 }}>About</Button>
-            <Button sx={{ color: "#fff", m: 2 }}>News</Button>
+            <Button sx={{ color: "#fff", m: 2 }} to='/counselling' component={Link}>News</Button>
             <Button sx={{ color: "#fff", m: 2 }}>Join US</Button>
             <Button sx={{ color: "#fff", m: 2 }}>Location</Button>
             <Button sx={{
@@ -90,7 +92,7 @@ const Appbarlogin = (props) => {
               borderColor: "#ee7925",
               color: "#fff",
             },
-          }} variant="contained">Login</Button>
+          }} variant="contained" to='/login' component={Link}>Login</Button>
         </Toolbar>
       </AppBar>
       <nav>
