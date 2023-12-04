@@ -19,14 +19,13 @@ const validationSchema = Yup.object({
 const Dashboard = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [findClass, setFindClass] = React.useState();
-console.log("selectedImage", selectedImage)
+
     const handleFileChange = (event) => {
         const file = event.target.files[0];
 
         if (file) {
-            // Update state with the selected image file
             setSelectedImage(URL.createObjectURL(file));
-            console.log("file",file)
+            console.log("file", file)
         }
     };
     const handleCameraClick = () => {
